@@ -11,7 +11,7 @@ _commander["default"].command('description').alias('d').description('See package
   console.log('Create react components from command line');
 });
 
-_commander["default"].command('create', 'Creates a react component').alias('c').description('Creates a react component').action(function () {
+_commander["default"].command('create').alias('c').description('Creates a react component').action(function () {
   (0, _menu.create)();
 });
 

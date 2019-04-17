@@ -11,7 +11,7 @@ cli
   })
 
 cli
-  .command('create', 'Creates a react component')
+  .command('create')
   .alias('c')
   .description('Creates a react component')
   .action(() => {
