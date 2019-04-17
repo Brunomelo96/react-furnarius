@@ -7,6 +7,14 @@ import { write, createDirectory, createTestDirectory, createStyled } from '../ut
 import { join } from 'path'
 
 export const createReact = (template) => {
+  const { componentName } = template
+  const capitalLetter = componentName[0]
+
+  if (componentName == "" || capitalLetter != capitalLetter.toUpperCase()) {
+    console.log('Invalid component name')
+    process.exit(1)
+  }
+
   createReactComp(template)
   createReactStyled(template)
   createReactTest(template)
