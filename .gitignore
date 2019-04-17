@@ -1,0 +1,12 @@
+#Build directory
+dist/
+
+#Node Modules
+node_modules/
+
+#Yarn
+yarn.lock
+
+#Package-lock
+package-lock.json
+
