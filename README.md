@@ -5,7 +5,7 @@ Create React components from command line.
 ## Quick Start
 - To install the package, run: <br />
 ```
-  $ npm install react-furnarius
+  $ npm install -g react-furnarius
 ```
 or
 ```
