@@ -3,8 +3,9 @@ import cli from 'commander'
 import { create } from './utils/menu'
 
 cli
-  .command('description', 'See package description')
+  .command('description')
   .alias('d')
+  .description('See package description')
   .action(() => {
     console.log('Create react components from command line')
   })
@@ -12,6 +13,7 @@ cli
 cli
   .command('create', 'Creates a react component')
   .alias('c')
+  .description('Creates a react component')
   .action(() => {
     create()
   })

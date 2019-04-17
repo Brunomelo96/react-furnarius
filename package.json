@@ -1,6 +1,6 @@
 {
   "name": "react-furnarius",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Create react components from command line",
   "main": "./dist/index.js",
   "bin": {
