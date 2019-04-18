@@ -22,6 +22,14 @@ var _path = require("path");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var createReact = function createReact(template) {
+  var componentName = template.componentName;
+  var capitalLetter = componentName[0];
+
+  if (componentName == "" || capitalLetter != capitalLetter.toUpperCase()) {
+    console.log('Invalid component name');
+    process.exit(1);
+  }
+
   createReactComp(template);
   createReactStyled(template);
   createReactTest(template);
