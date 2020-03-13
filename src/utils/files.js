@@ -24,9 +24,9 @@ export const createStyled = (path, name) => {
   }
 }
 
-export const createTestDirectory = (path) => {
+export const createTestDirectory = (path, name) => {
   try {
-    const testPath = join(path, '__tests__')
+    const testPath = join(path, name, '__tests__')
     mkdir(testPath)
     return testPath
   }

@@ -72,7 +72,7 @@ var createReactTest = function createReactTest(_ref3) {
 
   if (componentTest !== 'none') {
     var path = (0, _path.join)(componentName, componentPath);
-    var testDirectory = (0, _files.createTestDirectory)(path);
+    var testDirectory = (0, _files.createTestDirectory)(path, componentName);
     var testFile = componentName + '.spec.js';
     var testPath = (0, _path.join)(testDirectory, testFile);
     var testView = {

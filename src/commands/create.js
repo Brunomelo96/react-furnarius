@@ -43,7 +43,7 @@ export const createReactStyled = ({ componentName, componentPath, componentStyle
 export const createReactTest = ({ componentName, componentPath, componentTest }) => {
   if (componentTest !== 'none') {
     const path = join(componentName, componentPath)
-    const testDirectory = createTestDirectory(path)
+    const testDirectory = createTestDirectory(path, componentName)
     const testFile = componentName + '.spec.js'
     const testPath = join(testDirectory, testFile)
     const testView = {

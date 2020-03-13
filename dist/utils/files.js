@@ -35,9 +35,9 @@ var createStyled = function createStyled(path, name) {
 
 exports.createStyled = createStyled;
 
-var createTestDirectory = function createTestDirectory(path) {
+var createTestDirectory = function createTestDirectory(path, name) {
   try {
-    var testPath = (0, _path.join)(path, '__tests__');
+    var testPath = (0, _path.join)(path, name, '__tests__');
     (0, _shelljs.mkdir)(testPath);
     return testPath;
   } catch (error) {
