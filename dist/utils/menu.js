@@ -23,12 +23,6 @@ var questions = [{
   message: 'Type the path of your component:',
   "default": './'
 }, {
-  type: 'list',
-  name: 'componentType',
-  message: 'Do you want it to be stateful or stateless?',
-  choices: _types.compTypesPlain,
-  "default": 'Stateless'
-}, {
   type: 'confirm',
   name: 'componentPropTypes',
   message: 'Do you want to use prop-types?'

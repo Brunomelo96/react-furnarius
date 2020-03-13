@@ -1,12 +1,3 @@
-export const compTypes = [
-  { name: 'Stateful' },
-  { name: 'Stateless', }
-]
-
-export const compTypesPlain = compTypes.map((item => {
-  return item.name
-}))
-
 export const compTest = [
   { name: 'Enzyme' },
   { name: 'React Test Renderer' },

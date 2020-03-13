@@ -1,5 +1,4 @@
-import statefulTemplate from '../templates/stateful'
-import statelessTemplate from '../templates/stateless'
+import reactComponent from '../templates/reactComponent'
 import testTemplate from '../templates/test'
 import styledTemplate from '../templates/styled'
 import { createTemplate } from '../utils/template'
@@ -20,15 +19,15 @@ export const createReact = (template) => {
   createReactTest(template)
 }
 
-export const createReactComp = ({ componentName, componentPath, componentPropTypes, componentType }) => {
+export const createReactComp = ({ componentName, componentPath, componentPropTypes }) => {
   const path = createDirectory(componentPath, componentName)
   const file = join(path, 'index.jsx')
   const componentView = {
     name: componentName,
     propTypes: componentPropTypes
   }
-  const component = componentType === 'Stateful' ? statefulTemplate : statelessTemplate
-  const code = createTemplate(component, componentView)
+
+  const code = createTemplate(reactComponent, componentView)
 
   write(file, code)
 }

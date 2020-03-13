@@ -5,9 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.createReactTest = exports.createReactStyled = exports.createReactComp = exports.createReact = void 0;
 
-var _stateful = _interopRequireDefault(require("../templates/stateful"));
-
-var _stateless = _interopRequireDefault(require("../templates/stateless"));
+var _reactComponent = _interopRequireDefault(require("../templates/reactComponent"));
 
 var _test = _interopRequireDefault(require("../templates/test"));
 
@@ -40,16 +38,14 @@ exports.createReact = createReact;
 var createReactComp = function createReactComp(_ref) {
   var componentName = _ref.componentName,
       componentPath = _ref.componentPath,
-      componentPropTypes = _ref.componentPropTypes,
-      componentType = _ref.componentType;
+      componentPropTypes = _ref.componentPropTypes;
   var path = (0, _files.createDirectory)(componentPath, componentName);
   var file = (0, _path.join)(path, 'index.jsx');
   var componentView = {
     name: componentName,
     propTypes: componentPropTypes
   };
-  var component = componentType === 'Stateful' ? _stateful["default"] : _stateless["default"];
-  var code = (0, _template.createTemplate)(component, componentView);
+  var code = (0, _template.createTemplate)(_reactComponent["default"], componentView);
   (0, _files.write)(file, code);
 };
 
